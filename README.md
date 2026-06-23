@@ -6,19 +6,19 @@ This repository provides a **reproducible pipeline** for evaluating the quality 
 
 ## Background
 
-Depression remains one of the leading causes of disability worldwide, highlighting the need for **robust clinical studies** to accurately assess treatment responses.  
-Large-scale clinical datasets offer valuable opportunities to understand treatment effectiveness; however, **missing data** presents a major challenge to drawing reliable conclusions.
-
 This project applies **Topological Data Analysis (TDA)** to quantitatively assess and compare different imputation strategies.  
 By examining the **topological structures** of complete and imputed datasets, the pipeline evaluates how well the imputed data preserves the intrinsic geometry of the original dataset—an essential step in ensuring the **integrity and reproducibility** of clinical research findings.
+
+In addition, the framework performs **statistical significance testing** to identify meaningful differences between complete and imputed datasets, providing a complementary perspective on imputation quality.
+
 
 ---
 
 ## Pipeline Overview
 
-The pipeline compares two datasets:
-- **Complete-case dataset** – the ground truth (no missing values)
-- **Imputed dataset** – after missing-value imputation
+The pipeline compares the preservation of main shape charcateristics between two datasets:
+- **Complete-case dataset**: no missing values
+- **Imputed dataset**: after missing-value imputation
 
 It performs:
 1. Data standardization and 2D filtering (PCA1 + kNN distance)
